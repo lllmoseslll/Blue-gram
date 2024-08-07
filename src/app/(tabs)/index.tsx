@@ -7,18 +7,16 @@ import PostListItem from "~/src/component/PostListItem";
 export default function FeedScreen() {
   return (
     <FlatList
-      className="max-w-xl self-center "
       data={posts}
       renderItem={({ item }) => <PostListItem post={item} />}
-      contentContainerStyle={{ gap: 10, maxWidth: 512, width: "100%" }}
+      contentContainerStyle={{
+        gap: 10,
+        maxWidth: 512,
+        width: "100%",
+        alignItems: "center",
+        alignSelf: "center",
+      }}
       showsVerticalScrollIndicator={false}
     />
   );
-  // return (
-  //   <View>
-  //     <PostListItem post={posts[3]} />
-  //     <PostListItem post={posts[2]} />
-  //     <PostListItem post={posts[0]} />
-  //   </View>
-  // );
 }
