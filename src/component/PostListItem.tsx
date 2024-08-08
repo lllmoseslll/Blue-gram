@@ -16,7 +16,9 @@ export default function PostListItem({ post }) {
   myImage.resize(thumbnail().width(500).height(500));
 
   const avatar = cld.image(post.user.avatar_url);
-  avatar.resize(thumbnail().width(48).height(48).gravity(focusOn(FocusOn.face()))); // Round the corners.
+  avatar.resize(
+    thumbnail().width(48).height(48).gravity(focusOn(FocusOn.face()))
+  ); // Round the corners.
 
   return (
     <View className=" bg-white">
@@ -34,7 +36,7 @@ export default function PostListItem({ post }) {
         <AntDesign name="hearto" size={24} />
         <Ionicons name="chatbubble-outline" size={24} />
         <Feather name="send" size={24} />
-        <Feather name="bookmark" className=" ml-suto" size={24} />
+        <Feather name="bookmark" className=" " size={24} />
       </View>
     </View>
   );
